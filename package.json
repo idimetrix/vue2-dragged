@@ -1,0 +1,78 @@
+{
+  "name": "vue2-dragged",
+  "description": "A simple Vue 2 directive plugin for drag event detection",
+  "version": "1.0.0",
+  "author": {
+    "name": "Dmitry Selikhov",
+    "email": "selikhov.dmitrey@gmail.com",
+    "url": "https://www.linkedin.com/in/dimetrix"
+  },
+  "keywords": [
+    "vue",
+    "vuejs",
+    "vue2",
+    "vuejs2"
+  ],
+  "main": "dist/vue2-dragged.umd.js",
+  "browser": "dist/vue2-dragged.common.js",
+  "unpkg": "dist/vue2-dragged.umd.min.js",
+  "jsDelivr": "dist/vue2-dragged.umd.min.js",
+  "files": [
+    "dist/**/*.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/idimetrix/vue2-dragged"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/idimetrix/vue2-dragged/issues",
+    "email": "selikhov.dmitrey@gmail.com"
+  },
+  "homepage": "https://github.com/idimetrix/vue2-dragged#readme",
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build --target lib --dest 'dist' 'src/component/index.js' --mode production --report",
+    "test:unit": "vue-cli-service test:unit",
+    "lint": "vue-cli-service lint",
+    "prepare": "npm run build"
+  },
+  "dependencies": {
+    "core-js": "^3.6.2",
+    "node-sass": "^4.13.0",
+    "sass-loader": "^8.0.0",
+    "vue": "^2.6.11"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^4.1.2",
+    "@vue/cli-plugin-eslint": "^4.1.2",
+    "@vue/cli-plugin-unit-jest": "^4.1.2",
+    "@vue/cli-service": "^4.1.2",
+    "@vue/eslint-config-prettier": "^6.0.0",
+    "@vue/test-utils": "1.0.0-beta.30",
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.8.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-vue": "^6.1.2",
+    "lint-staged": "^9.5.0",
+    "prettier": "^1.19.1",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ],
+  "jest": {
+    "preset": "@vue/cli-plugin-unit-jest"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged",
+    "pre-push": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,vue}": [
+      "vue-cli-service lint",
+      "git add"
+    ]
+  }
+}
